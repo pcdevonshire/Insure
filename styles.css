@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+/* Still need to add the background image lines */
+
+/* ----- Universal styles ----- */
+
+:root {
+    /* Colors */
+    --purple: hsl(256, 26%, 20%);
+    --blue: hsl(216, 30%, 68%);
+    --darkPurple: hsl(270, 9%, 17%);
+    --gray: hsl(273, 4%, 51%);
+    --lightGray: hsl(0, 0%, 98%);
+    --white: #fff;
+    --black: #000;
+    /* Fonts */
+    --DM: 'DM Serif Display', serif;
+    --Karla: 'Karla', sans-serif;
+    }
+    
+::selection {
+    background-color: var(--purple);
+    color: var(--white);
+}
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    height: 100vh;
+    min-width: 280px;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: var(--Karla);
+    font-weight: 400; /* Font weights 400, 700 */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+:is(h1, h2, h3) {
+    font-family: var(--DM);
+}
+
+/* ----- Header styles ----- */
+
+nav {
+    padding: 1.5em 1em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+nav ul li:first-of-type {
+    margin-right: auto;
+}
+
+nav a {
+    color: var(--gray);
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul li:last-of-type {
+    border: 1px solid var(--black);
+    padding: 0.5em 1.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+#nav-button {
+    color: var(--black);
+    transition: color 0.2s ease-in-out;
+}
+
+/* ----- Hero styles ----- */
+
+.hero {
+    background-color: var(--purple);
+    text-align: center;
+    padding: 5em 1em;
+}
+
+.hero :is(h1, p, a) {
+    color: var(--white);
+}
+
+.hero a {
+    border: 1px solid var(--white);
+    padding: 0.5em 1.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+.hero hr {
+    display: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    line-height: 1.5;
+    margin-bottom: 2em;
+}
+
+/* ----- .different styles ----- */
+
+.different {
+    text-align: center;
+    padding: 5em 1em;
+}
+
+.different hr {
+    width: 40%;
+    margin: 0 auto 2em auto;
+    height: 1px;
+    background-color: var(--gray);
+    border: none;
+}
+
+.different h1 {
+    font-size: 2.75rem;
+    margin-bottom: 2em;
+}
+
+.first-column, .second-column, .third-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+.different p {
+    color: var(--gray);
+    margin-bottom: 3em;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+/* ----- .more styles ----- */
+
+.more {
+    background-color: var(--purple);
+    max-width: 90%;
+    margin: 0 auto 10em auto;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.more h2, .more a {
+    color: var(--white);
+}
+
+h2 {
+    margin-bottom: 1.5em;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.more a {
+    border: 1px solid var(--white);
+    padding: 0.5em 1.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ----- Footer styles ----- */
+
+footer {
+    background-color: var(--lightGray);
+    text-align: center;
+    padding: 5em 0;
+}
+
+.footer-nav img {
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-nav img:first-of-type {
+    margin-bottom: 2em;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+footer hr {
+    width: 85%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: var(--gray);
+    border: none;
+}
+
+.footer-list ul {
+    line-height: 2;
+    font-weight: 700;
+}
+
+h4 {
+    color: var(--gray);
+    margin: 1.5em 0;
+}
+
+footer h4:first-of-type {
+    margin-top: 2em;
+}
+
+.footer-list a {
+    color: var(--black);
+    transition: all 0.2s ease-in-out;
+    border-bottom: 1px solid transparent;
+}
+
+/* ----- Hover effects ----- */
+
+nav a:hover {
+    color: var(--black);
+}
+
+nav ul li:last-of-type:hover {
+    background-color: var(--black);
+}
+
+#nav-button:hover {
+    color: var(--white);
+}
+
+.hero a:hover, .more a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.footer-nav > a img:hover {
+    transform: scale(110%);
+}
+
+.icons img:hover {
+    filter: brightness(0);
+    transform: scale(120%);
+}
+
+.footer-list a:hover {
+    border-color: var(--black);
+}
+
+/* ----- Responsive styles ----- */
+
+@media only screen and (min-width: 768px) {
+
+    main > img {
+        position: absolute;
+        top: 10em;
+        right: 5em;
+        width: clamp(280px, 25vw, 540px);
+    }
+
+    .hero {
+        text-align: left;
+        padding: 5em 10em;
+        height: 500px;
+    }
+
+    .hero hr {
+        display: block;
+        width: 15%;
+        margin-bottom: 2em;
+    }
+
+    .hero p {
+        max-width: 50%;
+    }
+
+}
+
+
