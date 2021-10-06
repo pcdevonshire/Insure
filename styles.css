@@ -64,31 +64,39 @@ nav {
     padding: 1.5em 1em;
 }
 
-nav ul {
+nav > ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
 }
 
-nav ul li:first-of-type {
+nav > ul li:first-of-type {
     margin-right: auto;
 }
 
-nav a {
-    color: var(--gray);
-    transition: color 0.2s ease-in-out;
-}
-
-nav ul li:last-of-type {
-    border: 1px solid var(--black);
-    padding: 0.5em 1.5em;
+.mobile-menu {
+    position: fixed;
+    top: 5em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(--darkPurple);
+    text-align: center;
+    padding: 5em 1em;
+    z-index: 5;
+    display: none;
     transition: all 0.2s ease-in-out;
 }
 
-#nav-button {
-    color: var(--black);
-    transition: color 0.2s ease-in-out;
+.mobile-menu li {
+    margin-bottom: 3em;
+}
+
+.mobile-menu a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
 }
 
 /* ----- Hero styles ----- */
@@ -245,15 +253,9 @@ footer h4:first-of-type {
 
 /* ----- Hover effects ----- */
 
-nav a:hover {
-    color: var(--black);
-}
-
-nav ul li:last-of-type:hover {
-    background-color: var(--black);
-}
-
-#nav-button:hover {
+.mobile-menu a:hover {
+    border: 1px solid var(--white);
+    padding: 0.5em 3em;
     color: var(--white);
 }
 
@@ -279,8 +281,72 @@ nav ul li:last-of-type:hover {
 
 @media only screen and (min-width: 768px) {
 
+    nav a:hover {
+        color: var(--black);
+    }
+    
+    .mobile-menu a:hover {
+        border: 0;
+        padding: 0;
+        color: var(--black);
+    }
+    
+    #nav-button:hover {
+        background-color: var(--black);
+    }
+    
+    #nav-button > a:hover {
+        color: var(--white);
+    }
+
     nav {
         padding: 2em 10%;
+    }
+
+    nav a {
+        color: var(--gray);
+        transition: color 0.2s ease-in-out;
+    }
+    
+    #nav-button {
+        border: 1px solid var(--black);
+        padding: 0.5em 1.5em;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    #nav-button a {
+        color: var(--black);
+    }
+
+    .mobile-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow-x: auto;
+        background-color: var(--white);
+        text-align: left;
+        padding: 0;
+        display: block;
+    }
+    
+    .mobile-menu li {
+        margin-bottom: 0;
+    }
+    
+    .mobile-menu a {
+        color: var(--gray);
+        font-size: 1rem;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .burger {
+        display: none;
     }
 
     main > img {

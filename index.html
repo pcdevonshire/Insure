@@ -19,10 +19,17 @@
         <nav>
             <ul>
                 <li><a href="#"><img src="images/logo.svg" alt="logo"></a></li>
-                <li><a href="#">HOW WE WORK</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">ACCOUNT</a></li>
-                <li><a href="#" id="nav-button">VIEW PLANS</a></li>
+                <li>
+                    <div class="mobile-menu">
+                        <ul>
+                            <li><a href="#">HOW WE WORK</a></li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">ACCOUNT</a></li>
+                            <li id="nav-button"><a href="#">VIEW PLANS</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" onclick="toggle()"><img class="burger" src="images/icon-hamburger.svg" alt="menu"></a></li>
             </ul>
         </nav>
     </header>
@@ -115,5 +122,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
