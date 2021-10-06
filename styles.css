@@ -32,7 +32,7 @@
 body {
     height: 100vh;
     min-width: 280px;
-    max-width: 1440px;
+    max-width: 1980px;
     margin: 0 auto;
     overflow-x: hidden;
     font-family: var(--Karla);
@@ -279,27 +279,152 @@ nav ul li:last-of-type:hover {
 
 @media only screen and (min-width: 768px) {
 
+    nav {
+        padding: 2em 10%;
+    }
+
     main > img {
         position: absolute;
         top: 10em;
-        right: 5em;
-        width: clamp(280px, 25vw, 540px);
+        right: 10%;
+        width: clamp(280px, 30vw, 540px);
     }
 
     .hero {
         text-align: left;
-        padding: 5em 10em;
-        height: 500px;
+        padding: 5em 10%;
     }
 
     .hero hr {
         display: block;
-        width: 15%;
+        width: 10%;
         margin-bottom: 2em;
     }
 
+    .hero h1 {
+        font-size: clamp(3rem, 4vw, 5rem);
+    }
+
     .hero p {
-        max-width: 50%;
+        font-size: clamp(1rem, 1vw, 1.25rem);
+        max-width: 45%;
+        margin-bottom: 3em;
+    }
+
+    .hero a {
+        font-size: clamp(1rem, 1vw, 1.25rem);
+        padding: 1em 2em;
+    }
+
+    .different {
+        text-align: left;
+        padding: 5em 10%;
+        margin-bottom: 5em;
+    }
+    
+    .different hr {
+        width: 10%;
+        margin: 0 0 3em 0;
+    }
+    
+    .different h1 {
+        font-size: clamp(2.75rem, 4vw, 5rem);
+        margin-bottom: 1em;
+    }
+    
+    .three-column {
+        display: flex;
+        align-items: start; /* <---- */
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .three-column img {
+        width: clamp(86px, 5vw, 100px);
+    }
+
+    .first-column, .second-column, .third-column {
+        align-items: start;
+        justify-content: space-between;
+        gap: 2em;
+    }
+    
+    h3 {
+        font-size: clamp(1.75rem, 2.5vw, 3rem); 
+    }
+    
+    .different p {
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
+        margin-bottom: 0;
+        max-width: 600px;
+    }
+
+    .more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80%;
+        padding: 5em;
+        text-align: left;
+    }
+    
+    .more h2 {
+        margin-bottom: 0;
+        font-size: clamp(2.5rem, 3vw, 3.75rem);
+        max-width: 40%;
+    }
+    
+    .more a {
+        font-size: clamp(1rem, 1vw, 1.25rem);
+        padding: 1em 2em;
+    }
+
+    footer {
+        text-align: left;
+        padding: 5em 10%;
+    }
+    
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-nav img {
+        margin: 0;
+    }
+    
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    
+    footer hr {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .footer-list {
+        display: flex;
+        justify-content: left;
+        align-items: start;
+        gap: min(8vw, 10em);
+    }
+    
+    .our-company, .help-me, .contact, .others {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h4 {
+        margin: 2em 0;
+    }
+    
+    .footer-list a {
+        font-size: 1rem;
     }
 
 }
